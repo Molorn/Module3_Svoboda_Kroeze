@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
+    public GameObject otherObject;
     public bool gateOpen;
     //public Transform targetPosition;
     //public float speed = 5f;
@@ -12,7 +13,7 @@ public class Gate : MonoBehaviour
     {
         gateOpen = true;
         Debug.Log("Gate opened by opengate function");
-        Destroy(gameObject);
+        Destroy(otherObject);
     }
 
     void Start()

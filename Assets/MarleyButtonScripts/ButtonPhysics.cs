@@ -59,7 +59,7 @@ public class ButtonPhysics : MonoBehaviour
     {
         prevPressedState = isPressed;
         Debug.Log(gameObject.tag);
-        if (gameObject.tag == "2")
+        if (gameObject.tag == "1")
         {
             Debug.Log("sent");
             gate.OpenGate();
