@@ -15,13 +15,19 @@ public class Breakable : MonoBehaviour
 
     BoxCollider bc;
     // Start is called before the first frame update
+
+    private void Start()
+    {
+        shatter = GetComponent<AudioSource>();
+    }
     private void Awake()
     {
         fullPot.SetActive(true);
         brokenPot.SetActive(false);
-        paperSlip.SetActive(false);
-
-        shatter = GetComponent<AudioSource>();
+        if (paperSlip != null)
+        {
+            paperSlip.SetActive(false);
+        }
 
         bc = GetComponent<BoxCollider>();
     }
@@ -39,7 +45,13 @@ public class Breakable : MonoBehaviour
         fullPot.SetActive(false);
         brokenPot.SetActive(true);
         transform.DetachChildren();
-        paperSlip.SetActive(true);
-        shatter.Play();
+        if (paperSlip != null)
+        {
+            paperSlip.SetActive(true);
+        }
+        if (!shatter.isPlaying)
+        {
+            shatter.Play();
+        }
     }
 }
