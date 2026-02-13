@@ -8,7 +8,6 @@ public class Rotator : MonoBehaviour
 
     float timeVar = 0.5f;
     bool floatUp = false;
-    public bool isGrabbed = false;
 
     // Update is called once per frame
     void Update()

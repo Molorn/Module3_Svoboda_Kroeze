@@ -11,6 +11,8 @@ public class Breakable : MonoBehaviour
 
     public GameObject paperSlip;
 
+    private AudioSource shatter;
+
     BoxCollider bc;
     // Start is called before the first frame update
     private void Awake()
@@ -18,6 +20,8 @@ public class Breakable : MonoBehaviour
         fullPot.SetActive(true);
         brokenPot.SetActive(false);
         paperSlip.SetActive(false);
+
+        shatter = GetComponent<AudioSource>();
 
         bc = GetComponent<BoxCollider>();
     }
@@ -36,5 +40,6 @@ public class Breakable : MonoBehaviour
         brokenPot.SetActive(true);
         transform.DetachChildren();
         paperSlip.SetActive(true);
+        shatter.Play();
     }
 }

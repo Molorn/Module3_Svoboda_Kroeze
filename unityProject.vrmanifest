@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.module3_svoboda_kroeze.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "E:\\Creating Virtual Worlds\\Module 3\\Module3_Svoboda_Kroeze\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Module3_Svoboda_Kroeze [Testing]"
+        }
+      }
+    }
+  ]
+}
