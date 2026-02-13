@@ -9,12 +9,15 @@ public class Breakable : MonoBehaviour
     [SerializeField] GameObject fullPot;
     [SerializeField] GameObject brokenPot;
 
+    public GameObject paperSlip;
+
     BoxCollider bc;
     // Start is called before the first frame update
     private void Awake()
     {
         fullPot.SetActive(true);
         brokenPot.SetActive(false);
+        paperSlip.SetActive(false);
 
         bc = GetComponent<BoxCollider>();
     }
@@ -31,5 +34,7 @@ public class Breakable : MonoBehaviour
     {
         fullPot.SetActive(false);
         brokenPot.SetActive(true);
+        transform.DetachChildren();
+        paperSlip.SetActive(true);
     }
 }
